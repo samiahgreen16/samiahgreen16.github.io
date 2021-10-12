@@ -76,6 +76,10 @@
 				positionX = positionX + 10;
 				moveBoxTo(positionX);
                 speed = 10;
+				if (conditionIsTrue) {
+					speed = speed * -1;
+            }
+
 			};
 			// When you first create the Variable...
 var positionX = 0;
