@@ -72,16 +72,8 @@
 			turn it around! 
 			*/
 			function update() {
-                positionX = positionX + speed;
+                positionX = positionX + 10;
 				moveBoxTo(positionX,);
-
-				if (conditionIsTrue) {
-					speed = -speed;
-                }
-
-				if (conditionIsTrue) {
-                    positionX += speed;
-                }
 			};
                
 			// When you first create the Variable...
@@ -112,10 +104,10 @@ moveBoxTo(positionX);
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-				positionX = 0
+				positionX = 0;
                 points += 1;
 				
-				changeBoxText(1);
+				changeBoxText(points);
 
 			};
 		})();
