@@ -67,5 +67,7 @@ $(document).ready(function(){
   ////////////// HELPER FUNCTIONS /////////////////
   /////////////////////////////////////////////////
 
+function
+
   /* functions for executing sub-tasks of the core logic */
 });

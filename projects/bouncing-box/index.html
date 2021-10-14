@@ -6,15 +6,15 @@
 	<script src="jquery.min.js"></script>
 	<style>
 		.box {
-			width: 200px;
-			height: 300px;
+			width: 70px;
+			height: 70px;
 			background-color: teal;
 			font-size: 300%;
 			text-align: center;
 			display: block;
 			position: absolute;
-			top: 400px;
-			left: 100px;  /* <--- Change me! */
+			top: 100px;
+			left: 0px;  /* <--- Change me! */
 		}
 		.board{
 			height: 100vh;
@@ -112,13 +112,10 @@ moveBoxTo(positionX);
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-				positionX = 0;
-
+				positionX = 0
                 positionX = positionX + 10;
-                
-				speed += 3;
-                
-				changeBoxText(points);
+				
+				changeBoxText(1);
 
 			};
 		})();
