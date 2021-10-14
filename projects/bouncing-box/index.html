@@ -62,7 +62,7 @@
 			
 			// TODO 2 - Variable declarations
 
-            var positionX = 0;  var positionY;
+            var positionX = 0; 
             var points = 0;     
             var speed = 10;     
 			
@@ -72,8 +72,16 @@
 			turn it around! 
 			*/
 			function update() {
-                positionX = positionX + 10;
-				moveBoxTo(positionX,);
+				positionX += speed;
+
+				if (positionX > BOARD_WIDTH) {
+					speedX = -speedX;
+				}
+				else if (positionX < 0) {
+					speedX = -speedX;
+				}
+				
+			    moveBoxTo(positionX,);
 			};
                
 			// When you first create the Variable...
@@ -106,7 +114,7 @@ moveBoxTo(positionX);
 			function handleBoxClick() {
 				positionX = 0;
                 points += 1;
-				
+				speed += 3;
 				changeBoxText(points);
 
 			};
