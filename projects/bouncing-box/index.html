@@ -55,6 +55,34 @@
             it should move the Box to a new location. If the box drifts off the screen
             turn it around! 
             */
+           // When you first create the Variable...
+var positionX = 0;
+
+// When you first create the Variable...
+var positionX = 0;
+
+// during update... 
+// Frame 1
+positionX = 0 + 10;         // positionX = 10
+moveBoxTo(positionX);
+
+// Frame 2
+positionX = 10 + 10;        // positionX = 20
+moveBoxTo(positionX);
+
+// The Box is Clicked
+positionX = 0;              // positionX = 0
+
+// back to update...
+// Frame 3
+positionX = 0 + 10;         // positionX = 10
+moveBoxTo(positionX);
+
+// Frame 4
+positionX = 10 + 10;         // positionX = 20
+moveBoxTo(positionX);
+
+// so on...
             function update() {
                 positionX += speedX;
                 $box.css("left", positionX);
@@ -77,7 +105,6 @@
                 $box.text(points);
                 speedX += 3;
                 positionX = 0;
-
             };
 
         });
