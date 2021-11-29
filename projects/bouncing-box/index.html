@@ -47,7 +47,6 @@
             //////////////////////////////////////////////////////////////////
             // TODO 2 - Variable declarations 
             var positionX = 0;
-            var speedX = 10;
             var points = 0;
 
 
@@ -85,16 +84,10 @@ moveBoxTo(positionX);
 
 // so on...
             function update() {
-                positionX += speedX;
-                $box.css("left", positionX);
-               
-                if (positionX > boardWidth) {
-                    speedX = -speedX;
+                positionX = positionX + 10;
+                moveBoxTo(positionX);
                 }
-                if (positionX < 0) {
-                    speedX = -speedX;
-                }
-            };
+            }
 
             /* 
             This Function will be called each time the box is clicked. Each time it is called,
@@ -102,13 +95,12 @@ moveBoxTo(positionX);
             the left side of the screen.
             */
             function handleBoxClick() {
-                points += 1;
-                $box.text(points);
-                speedX += 3;
                 positionX = 0;
-            };
 
-        });
+                points = points + 1;
+
+                changeBoxText(points);
+            }
 	</script>
 </body>
 </html>
